@@ -7,4 +7,11 @@ class TheGame extends FlameGame {
     await super.onLoad();
     add(ParallaxBackground(size: size));
   }
+
+  @override
+  void onGameResize(Vector2 canvasSize) {
+    super.onGameResize(canvasSize);
+    print('game resized to ${canvasSize}');
+  }
+
 }
