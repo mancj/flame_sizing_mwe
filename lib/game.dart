@@ -5,7 +5,8 @@ class TheGame extends FlameGame {
   @override
   Future<void>? onLoad() async {
     await super.onLoad();
-    add(ParallaxBackground(size: size));
+    await add(ParallaxBackground(size: size));
+    print('game\'s children length ${children.length}');
   }
 
   @override
@@ -13,5 +14,4 @@ class TheGame extends FlameGame {
     super.onGameResize(canvasSize);
     print('game resized to ${canvasSize}');
   }
-
 }
